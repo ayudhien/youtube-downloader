@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  div.sampleContainer
+    div.loader
+      span.dot.dot_1
+      span.dot.dot_2
+      span.dot.dot_3
+      span.dot.dot_4
+  div.container
+    div.row
+      div.col-md-8
+        h2 Youtube Downloader
+        div#custom-search-input
+          div.input-group.col-md-12
+            input.form-control.input-lg#url(type="text" placeholder="https://www.youtube.com/watch?v=YVNIWuLs_7E")
+            span.input-group-btn
+              button.btn.btn-info.btn-lg#search(type="button")
+                i.glyphicon.glyphicon-search
+                Search
+
+
+
+    br
+    br
+    div.row
+      div.col-md-8#result
+        h4#youtube-title
+        p.help-block#description
+        ul.list-unstyled.list-group#youtube-format
+
+    div.row
+      hr
+      div.col-lg-12
+        div.col-md-6
+          //a(href="#") Terms of Service
+          //
+          //a(href="#") Privacy
+        div.col-md-6
+          p.muted.pull-right © #{copyright}
